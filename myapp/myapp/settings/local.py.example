@@ -1,0 +1,4 @@
+
+# Rename this file to `local.py` to use your development settings.
+
+DEBUG = True
