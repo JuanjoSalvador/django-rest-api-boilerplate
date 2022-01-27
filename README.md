@@ -4,7 +4,7 @@
 
 Sample project to kickstart your Django REST Framework-based app.
 
-## Install
+## Usage
 
 1. Download (better than clone) this repository. If you're going to clone it, make sure to change the `origin` git remote.
 
@@ -33,4 +33,9 @@ Settings for this boilerplate are splitted into two files: `settings/base.py` wi
 For example, here is where you place your `DEBUG = True` setting.
 
 ## Production
-...
+
+If you want to put your app in production, you will need to generate your own secret key. By default it will take it from your server environment variables. You can generate it by using the built-in command `generate_secret_key`.
+
+```shell
+$ python myapp/manage.py generate_secret_key
+```
