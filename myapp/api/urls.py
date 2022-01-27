@@ -1,10 +1,5 @@
-from django.urls import path, re_path
-from django.urls.conf import include
+from django.urls import path, include
 
-from rest_framework.routers import DefaultRouter
-from api.views import TestViewset
-
-router = DefaultRouter()
-router.register('test', TestViewset, basename='test-view'),
-
-urlpatterns = router.urls
+urlpatterns = [
+    path("core/", include("api.v1.urls")),    
+]
