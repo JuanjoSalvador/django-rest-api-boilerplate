@@ -12,7 +12,7 @@ Sample project to kickstart your Django REST Framework-based app.
     $ git remote remove origin
     $ git remote add origin YOUR-REPO-URL
     ```
-2. Create and activate your virtual environment (use whatever you want, I'm using `virtualenvwrapper`for this one), and install the requirements.
+2. Create and activate your virtual environment (use whatever you want, I'm using `virtualenvwrapper` for this one), and install the requirements.
 
     ```shell
     $ pip install -r requirements.txt
@@ -21,10 +21,21 @@ Sample project to kickstart your Django REST Framework-based app.
 3. Rename the project using the built-in command.
 
     ```shell
-    $ python myapp/manage.py rename_project MyFancyProject
+    $ python myapp/manage.py rename_project myapp MyFancyProject
     ```
 
 4. Run it, make your own config, and start hacking.
+
+### Running on Docker
+
+1. Make sure to having Docker and docker-compose installed, or equivalent if you're using Podman.
+2. Run the following commands into the project root folder (where the `Dockerfile` is placed):
+
+    ```shell
+    docker-compose build # just the first time!
+    docker-compose up
+    ```
+3. If you need to change the default starting config, override whatever you need at `entrypoint.sh`.
 
 ## Local config
 
